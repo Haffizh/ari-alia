@@ -53,6 +53,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7SMP7M"
 				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+<style>
+    #image {
+        border-radius: 1px;
+        width: 170px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
 
 <section class="top-cover">
 	<div class="inner">
@@ -293,23 +303,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="orn orn-06" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300"></div>
 </section>
 
-<!--<section class="ig-filter-wrap">-->
-<!--	<div class="ig-filter">-->
-<!--		<div class="ig-filter-head">-->
-<!--			<h2 class="ig-filter-title" data-aos="fade-up" data-aos-duration="1200">Instagram <br> Wedding Filter</h2>-->
-<!--			<p class="ig-filter-caption" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">Capture your moment while attending our-->
-<!--				wedding by using the Instagram filter below✨</p>-->
-<!--		</div>-->
-<!--		<div class="ig-filter-body">-->
-<!--			<div class="ig-filter-img-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">-->
-<!--				<img class="ig-filter-img" src="katsudoto.id/media/public/14315/12520/filter/thumb_lg_99043_1200_1200.jpg" alt="Instagram Filter Preview">-->
-<!--			</div>-->
-<!--			<div class="ig-filter-link-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">-->
-<!--				<a class="ig-filter-link" href="https://www.instagram.com/ar/588791616124435/" target="_blank">Use Filter</a>-->
-<!--			</div>-->
-<!--		</div>-->
-<!--	</div>-->
-<!--</section>-->
+<section class="ig-filter-wrap">
+	<div class="ig-filter">
+		<div class="ig-filter-head">
+			<h2 class="ig-filter-title" data-aos="fade-up" data-aos-duration="1200">Kirim Hadiah</h2>
+			<p class="ig-filter-caption" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">Berikan hadiah terbaik di hari yang baik untuk Ari & Alia. ✨</p>
+		</div>
+		<div class="ig-filter-body">
+			<div  class="ig-filter-img-wrap" id="image" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+				<img  class="ig-filter-img" src="katsudoto.id/media/public/14315/12520/filter/bni.png"  alt="Instagram Filter Preview">
+            </div>
+			<div class="ig-filter-link-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" style="margin-top: -24px;">
+                <h3>1149165241</h3>
+                <p class="ig-filter-caption" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                     a.n Ari Irawan Nuari
+                </p>
+                <input type="text" value="1149165241" hidden id="myInput">
+                <a class="ig-filter-link" onclick="copy()" style="margin-top: 5px;">Copy</a>
+            </div>
+		</div>
+	</div>
+</section>
 
 <section class="protocol protocol-02">
 	<div class="inner">
@@ -421,28 +435,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	});
 
 
-	$("button").on("click", function() {
-		var n = $("#copyMe").text();
-		$(".copied").attr("value", n);
-		$(".copied").attr("type", "text").select();
-		document.execCommand("copy")
-		$(".copied").attr("type", "hidden")
-	});
+    function copy() {
+        // Get the text field
+        var copyText = document.getElementById("myInput");
 
-	function lala() {
-		// Get the text field
-		var copyText = document.getElementById("lala");
+        // Select the text field
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); // For mobile devices
 
-		// Select the text field
-		copyText.select();
-		copyText.setSelectionRange(0, 99999); // For mobile devices
+        // Copy the text inside the text field
+        navigator.clipboard.writeText(copyText.value);
 
-		// Copy the text inside the text field
-		navigator.clipboard.writeText(copyText.value);
+        // Alert the copied text
+        alert("Copied the text: " + copyText.value);
+    }
 
-		// Alert the copied text
-		alert("Copied the text: " + copyText.value);
-	}
 </script>
 
 <div class="alert" id="alert">
